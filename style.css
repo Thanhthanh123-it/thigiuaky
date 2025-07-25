@@ -1,0 +1,618 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #000;
+  padding-top: 80px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-image: url("imagess/background4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+.logo {
+  font-size: 18px;
+  color: #fff;
+}
+
+.logo .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #f7d774;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: blue;
+}
+
+main {
+  display: flex;
+  min-height: 80vh;
+}
+
+.left-panel {
+  flex: 1;
+  background-image: url("imagess/background2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: visible;
+  min-height: 400px;
+}
+
+
+
+.card {
+  position: absolute;
+  top: 50%;
+  right: -90px; /* Đẩy card ra ngoài mép phải */
+  transform: translateY(-50%);
+  background-image: url("imagess/background2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px;
+  text-align: center;
+  border-radius: 8px;
+  width: 260px;
+  z-index: 2;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); 
+  transition: all 0.3s ease;
+}
+
+.card:hover{
+  transform: translateY(calc(-50% - 5px));
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+.card p {
+  color:#fff;
+}
+
+
+.card .title {
+  margin-top: 10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.card .social {
+  margin-top: 15px;
+}
+
+.card .social a {
+  margin: 0 10px;
+  color: #000;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.right-panel {
+  flex: 2;
+  background-image: url("imagess/background3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 60px;
+  padding-left: 200px; /* lùi sang phải né card */
+  position: relative;
+  z-index: 1;
+}
+
+
+.right-panel h1 {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.right-panel h3 {
+  margin: 10px 0 30px;
+  font-size: 20px;
+}
+
+.right-panel .buttons {
+  margin-bottom: 30px;
+}
+
+.right-panel button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: 1px solid #000;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.right-panel .blue {
+  background: blue;
+  color: #fff;
+  border: none;
+}
+
+.right-panel p {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-image: url("imagess/background4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+}
+
+.footer-left p {
+  line-height: 1.6;
+  color:#fff;
+}
+
+.footer-right {
+  text-align: right;
+  color:#fff;
+}
+
+.footer-right .social {
+  margin-top: 5px;
+  color:#fff;
+}
+
+.footer-right .social a {
+  margin-left: 12px;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/*project*/
+#projects-section {
+  background-image: url("imagess/background1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.projects-container h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.projects-container .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #f7d774;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.projects-desc {
+  max-width: 650px;
+  margin: 0 auto 40px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Project Card Layout */
+.project-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 800px;
+  margin: 30px auto;
+  background-image: url("imagess/background5.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); 
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+.project-features li{
+  color: #00ffff;
+}
+
+.project-box:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); 
+}
+
+.project-text,
+.project-img {
+  flex: 1;
+  padding: 30px;
+}
+
+.project-text {
+  text-align: left;
+}
+
+.project-text h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #b3f0ff;
+}
+
+.project-text .role {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #b3f0ff;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dot bar before title */
+.dot-vertical {
+  display: inline-block;
+  width: 4px;
+  height: 16px;
+  background: blue;
+  margin-right: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-box {
+    flex-direction: column;
+  }
+  .project-img,
+  .project-text {
+    padding: 20px;
+  }
+}
+
+.project-text ul.project-features {
+  padding-left: 20px;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  list-style-type: disc;
+  color: #333;
+}
+
+.project-text ul.project-features li {
+  margin-bottom: 10px;
+}
+
+/*let talk*/
+
+#contact-section {
+  position: relative;
+  padding: 80px 20px;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("imagess/background1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scaleY(-1); /* 💡 Lật ngang ảnh */
+  z-index: -1;
+}
+
+
+#contact-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+#contact-section .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #f7d774;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-image: url("imagess/background6.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  color: #00ffff;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  border: none;
+  border-bottom: 1px solid #000;
+  padding: 6px 0;
+  font-size: 14px;
+  background: transparent;
+  resize: none;
+}
+
+.send-btn {
+  background-color: blue;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  display: block;
+  margin: 20px auto 0 auto;
+}
+
+.send-btn:hover {
+  background-color: #0033cc;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+.buttons {
+  margin-bottom: 30px;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: 1px solid #000;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  color: #000;
+}
+
+.buttons button:hover {
+  background: #f0f0f0; /* xám nhạt */
+}
+
+.buttons button.active {
+  background: blue;
+  color: #fff;
+  border: none;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* Overlay toàn trang */
+#intro-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: #000; /* fallback nếu gif chưa load */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Ảnh GIF nằm ngang, che toàn màn hình */
+.intro-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* giãn vừa khung, không méo */
+  z-index: 1;
+}
+
+/* Nội dung phía trên gif */
+.intro-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  animation: floatUp 1.2s ease;
+  backdrop-filter: blur(2px);
+  padding: 20px;
+}
+
+.intro-content h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease;
+}
+
+#enter-btn {
+  padding: 10px 30px;
+  font-size: 16px;
+  border: none;
+  background: #00aaff;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#enter-btn:hover {
+  background: #0077cc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes floatUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/*CV*/  
+/* ===== CV SECTION STYLES ===== */
+#cv-section {
+  background-image: url("imagess/background7.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  text-align: left;
+  display: none;
+}
+
+.cv-container {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cv-container header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cv-container .avatar img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #e8d9ca;
+}
+
+.cv-container header h1 {
+  font-size: 28px;
+  margin: 15px 0 5px;
+}
+
+.cv-container header p {
+  font-size: 16px;
+  color: #777;
+}
+
+.cv-container .section {
+  margin-bottom: 30px;
+}
+
+.cv-container .section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #444;
+  border-bottom: 2px solid #e8d9ca;
+  padding-bottom: 4px;
+}
+
+.cv-container .section ul {
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+.cv-container .section ul li {
+  margin-bottom: 10px;
+}
+
+.cv-container .skills li {
+  background: #e8d9ca;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin: 5px 5px 0 0;
+}
+
+.cv-container a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.cv-container a:hover {
+  text-decoration: underline;
+}
+
